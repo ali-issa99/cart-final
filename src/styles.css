@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+.cart-item{
+font-size: small;
+
+
+}
+
+.filter{
+
+    font-size: small;
+}
+
+.card ,.form-control,.btn{
+
+    border-radius: 0;
+}
+
+
+.product-btn{
+font-size:smaller;
+
+}
+
+
+
+
+

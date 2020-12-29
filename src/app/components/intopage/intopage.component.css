@@ -1,0 +1,58 @@
+
+
+   .row-content{
+     margin : 0px 30px  auto;
+     padding : 0px 0px 50px 0px;
+     border-bottom:1px ridge;
+     min-height : 200px;
+     text-align: left;
+     align-items:center;
+    
+    }
+    
+
+   
+    
+   
+    .carousel-item {
+        
+        height: 300px;
+        max-height: 250px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      
+    }
+    
+  
+     .navbar-dark{
+    
+    background-color :rgb(185, 185, 185);
+    
+    
+    
+    }
+  
+  .carousel-item img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 300px;
+    }
+    
+    
+    #carouselButton {
+        right:0px;
+        position: absolute;
+        bottom: 0px;
+        z-index: 1;
+    }
+
+    .li{
+
+        margin:10px 10px;
+    }
+   
+    

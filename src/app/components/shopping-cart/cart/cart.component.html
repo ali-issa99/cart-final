@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.btn {
+
+  border: none;
+  color: rgb(90, 88, 88);
+  
+  font-size: px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+
+</style>
+</head>
+<body>
+<div *ngIf="cartitems.length===0" class="alert alert-success"> Your Cart is Empty</div>
+<ul *ngIf="cartitems.length>0" class="list-group">
+    <li class="list-group-item" *ngFor="let item of cartitems">
+
+      <div class="cart-item" >
+          <app-cart-item [cartitem]=item  ></app-cart-item>
+          <button id=item class="btn"  (click)="remove(item)"><i class="fa fa-minus"></i></button>
+          <button id=item class="btn" (click)="addproduct(item)"><i class="fa fa-plus"></i></button>
+   
+
+      </div>
+    
+   
+    </li>
+    
+    <li class="list-group-item active">
+        <strong>Total</strong>: {{ cartTotal | currency:'$'}}
+    </li>
+    <button  id="1" type="button" class="btn btn-sm btn-primary product-btn " class="alert alert-danger" (click)="removeall()" > Remove All </button>
+    
+</ul>
+
+</body>
+</html>

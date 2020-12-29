@@ -1,0 +1,143 @@
+@media (min-width:900px ) {
+
+
+
+
+    .row-content{
+     margin : 0px 30px  auto;
+     padding : 0px 0px 50px 0px;
+     border-bottom:1px ridge;
+     min-height : 200px;
+     text-align: left;
+     align-items:center;
+    
+    }
+    
+
+   
+    }
+   
+    .carousel-item {
+        
+        height: 300px;
+        max-height: 250px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      
+    }
+    
+    nav{
+        background:transparent;  
+        max-height: 50px;
+    }
+   
+    
+   
+
+    .footer{
+      
+        background-color: #c9c7ca;
+      
+        margin: 0px auto;
+        padding: 30px 30px 30px 30px;
+        
+        height:auto;
+     
+       
+        
+    
+        }
+    .navbar-dark{
+    
+    background-color :rgb(185, 185, 185);
+    
+    
+    
+    }
+   #contact:hover,#home:hover,#shop:hover{
+      
+      color: green;
+
+     }
+     
+     #contact,#home,#shop,#waffer{
+      
+        color:black;
+  
+       }
+
+   
+   
+    
+    
+    
+    .carousel-item img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 300px;
+    }
+    
+    
+    #carouselButton {
+        right:0px;
+        position: absolute;
+        bottom: 0px;
+        z-index: 1;
+    }
+
+    .li{
+
+        margin:10px 10px;
+    }
+   
+    .fa {
+      
+        padding:5px; 
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+      }
+      
+
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+      
+      }
+      .fa-envelope{
+
+        background: #dd4b39;
+        color: white;
+
+      }
+      
+      .fa-twitter {
+        background: #55ACEE;
+        color: white;
+      }
+ 
+      
+      .fa-google {
+        background: #dd4b39;
+        color: white;
+      }
+      
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+      
+      .fa-youtube {
+        background: #bb0000;
+        color: white;
+      }
+
+            
+    
+  
+       
+       
