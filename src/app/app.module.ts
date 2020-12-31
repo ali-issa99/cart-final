@@ -8,6 +8,10 @@ import { TooltipModule } from 'ng2-tooltip-directive';
 import { FormsModule} from '@angular/forms'
 
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+ 
+
+
 import {AngularFireDatabaseModule} from '@angular/fire/database'
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -63,9 +67,9 @@ import { AppRoutingModule} from './components/app-routing/app-routing.module';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence(),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
-
-    
+    AngularFireDatabaseModule,
+    NgbModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

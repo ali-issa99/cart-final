@@ -13,15 +13,15 @@ export class ProductListComponent implements OnInit {
 
 
   productlist: Product[]=[]
-  errMess: string;
+
 
   constructor(private productService:ProductService) { }
 
   ngOnInit() {
     
     this.productService.getProducts()
-      .subscribe(productlist => this.productlist = productlist,
-        errmess => this.errMess = <any>errmess );
+      .subscribe(productlist => this.productlist = productlist)
+       
   }
 
 
@@ -35,13 +35,15 @@ Filterbycategory(){
    
     const myvalue : HTMLInputElement = document.getElementById("categories") as HTMLInputElement
  
-    if( myvalue.value =='none'){
-      this.productService.getProducts()
-      .subscribe(productlist => this.productlist = productlist,
-        errmess => this.errMess = <any>errmess );
+    if( myvalue.value =='All'){
+       this.productService.getProducts()
+      .subscribe(productlist => this.productlist = productlist)
+      
 
-    }else if(myvalue.value!='none'){    
-      this.productlist=this.productlist.filter(n1 => n1.category == myvalue.value)
+    }else if(myvalue.value!='All'){    
+      this.productService.getProducts()
+      .subscribe(productlist => this.productlist = productlist.filter(n1 => n1.category == myvalue.value))
+       
 
 
 

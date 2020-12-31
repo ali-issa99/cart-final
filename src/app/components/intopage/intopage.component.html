@@ -1,55 +1,101 @@
 <body>
 
-<header>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
 
-        <div class="carousel-item active" style="background-image: url('/assets/supermarket-shopping.jpg')">
-
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+        
+                <div class="carousel-item active" style="background-image: url('/assets/supermarket-shopping.jpg')">
+        
+                </div>
+        
+                <div class="carousel-item" style="background-image: url('/assets/2.jpg')">
+        
+                    <p></p>
+                </div>
+        
+                <div class="carousel-item" style="background-image:url('/assets/7.jpg')">
+                    <p></p>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
+        
+        </header>
+        
 
-        <div class="carousel-item" style="background-image: url('/assets/2.jpg')">
 
-            <p></p>
-        </div>
 
-        <div class="carousel-item" style="background-image:url('/assets/7.jpg')">
-            <p></p>
-        </div>
+
+
+
+
+    <div style="text-align: center;">
+        <p></p>
+           
+        <h2 class="mt-0" style="padding-top: 30px;"><span class="badge badge-danger " style="font-size: 40px;"> Special offers </span></h2>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
 
-</header>
+    <div class="row">
 
 
-<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $("#mycarousel").carousel({ interval: 2000 });
-                $("#carousel-pause").click(function () {
-                    $("#mycarousel").carousel('pause');
-                });
-                $("#carousel-play").click(function () {
-                    $("#mycarousel").carousel('cycle');
-                });
-            });
- </script>
+
+        <div class="col-sm-9" style="padding-top: 40px;">
+
+              
+                    <div class="row">
+                        <div class="col-sm-4 col-md-3 offset-sm-2 offset-md-1" *ngFor="let productitem of productlist">
+                            <div class="card mb-4 shadow-sm">
+
+                                <img class=" images bd-placeholder-img card-img-top p-2" width="100px" height="200px"
+                                    [src]=productitem.imageurl alt="" />
+                                <div class="card-body">
+                                  
+                                    <p  id="hat" class="card-text"> <span class="badge badge-pill badge-outline-primary"> - {{ productitem.sale }}  % </span> </p>
+
+                                    <p class="card-text"><span class="badge badge-secondary " 
+                                        style="font-size: 20px;" ><strong><s style="text-decoration-color: crimson; text-decoration-thickness: 4px;">{{ productitem.price | currency:'$' }}</s></strong></span>
+                                        <span class="badge badge-danger " style="font-size: 24px;">  <strong>{{ productitem.price*(1-productitem.sale/100) | currency:'$' }}</strong> </span>
+                                    </p>
+
+                                    <p class="card-text"><strong>{{ productitem.description | slice: 0:20 }}...</strong></p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                          
+
+                                            <span tooltip="{{ productitem.description }}"
+                                                class="btn btn-sm btn-outline-secondary product-btn">View Details</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
 
 
 </body>
-
